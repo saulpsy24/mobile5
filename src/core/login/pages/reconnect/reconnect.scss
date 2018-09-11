@@ -1,0 +1,46 @@
+page-core-login-reconnect {
+    .content {
+        background: -webkit-radial-gradient(white, $gray-light);
+        background: radial-gradient(white, $gray-light);
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    img.login-logo {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .box {
+        padding: 16px;
+        margin: 8px;
+        background: $white;
+        border: 1px solid $gray;
+    }
+
+    .core-sitename, .core-siteurl {
+        @if $core-fixed-url { display: none; }
+    }
+
+    .list .core-username {
+        &.item-md {
+            @include padding-horizontal($item-md-padding-left, $content-padding);
+        }
+        &.item-ios {
+            @include padding-horizontal($item-ios-padding-left, $content-padding);
+        }
+        &.item-wp {
+            @include padding-horizontal($item-wp-padding-left, $content-padding);
+        }
+
+        .item-inner {
+            padding-left: 8px;
+        }
+    }
+
+    .item-input {
+        margin-bottom: 20px;
+    }
+}

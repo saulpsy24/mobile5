@@ -1,0 +1,40 @@
+page-core-user-profile {
+    .core-icon-foreground {
+        position: relative;
+        left: 60px;
+        bottom: 30px;
+        font-size: 24px;
+    }
+    .core-user-communication-handlers {
+        background: $list-background-color;
+        border-bottom: 1px solid $list-border-color;
+
+        .core-user-profile-handler {
+            background: $list-background-color;
+            border: 0;
+            color: $core-user-profile-communication-icons-color;
+
+            p {
+                margin: 0;
+            }
+
+            .icon {
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                max-width: 32px;
+                font-size: 22px;
+                line-height: 32px;
+                color: white;
+                background-color: $core-user-profile-communication-icons-color;
+                margin-bottom: 5px;
+          }
+        }
+    }
+
+    .core-user-profile-handler {
+        ion-spinner {
+            margin-left: 0.3em;
+        }
+    }
+}

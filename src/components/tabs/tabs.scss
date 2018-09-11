@@ -1,0 +1,158 @@
+.core-tabs-bar {
+    left: 0;
+    position: relative;
+    z-index: $z-index-toolbar;
+    display: flex;
+    width: 100%;
+    background: $core-top-tabs-background;
+
+    .row {
+        width: 100%;
+    }
+
+    a.tab-slide {
+        @extend .tab-button;
+
+        background: $core-top-tabs-background;
+        color: $core-top-tabs-color !important;
+        font-size: 1.6rem;
+        border: 0;
+        padding: 0 !important;
+
+        span {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            word-wrap: break-word;
+            display: block;
+            width: 100%;
+        }
+
+        &[aria-selected=true] {
+            color: $core-top-tabs-color-active !important;
+            border: 0 !important;
+            border-bottom: 2px solid $core-top-tabs-color-active !important;
+        }
+    }
+
+    ion-col {
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+
+        &.col-with-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ion-icon {
+                color: #ccc;
+            }
+        }
+    }
+}
+
+.md .core-tabs-bar a.tab-slide {
+    // @extend .tabs-md .tab-button;
+    min-height: $tabs-md-tab-min-height;
+
+    font-weight: $tabs-md-tab-font-weight;
+    color: $tabs-md-tab-text-color;
+}
+
+.ios .core-tabs-bar a.tab-slide {
+    // @extend .tabs-ios .tab-button;
+    max-width: $tabs-ios-tab-max-width;
+    min-height: $tabs-ios-tab-min-height;
+
+    font-size: $tabs-ios-tab-font-size + 4;
+    font-weight: $tabs-ios-tab-font-weight;
+    color: $tabs-ios-tab-text-color;
+}
+
+.wp .core-tabs-bar a.tab-slide {
+    //@extend .tabs-wp .tab-button;
+    @include border-radius(0);
+
+    min-height: $tabs-wp-tab-min-height;
+
+    border-bottom: $tabs-wp-tab-border;
+    font-size: $tabs-wp-tab-font-size;
+    font-weight: $tabs-wp-tab-font-weight;
+    color: $tabs-wp-tab-color;
+    box-shadow: none;
+}
+
+core-tabs {
+    .core-tabs-content-container {
+        height: 100%;
+
+        &.no-scroll {
+            height: auto;
+            padding-bottom: 0 !important;
+
+            .scroll-content {
+                overflow: hidden !important;
+                contain: initial;
+                position: relative;
+            }
+        }
+    }
+
+    &.tabs-hidden {
+        .core-tabs-bar {
+            display: none !important;
+        }
+        .core-tabs-content-container {
+            padding-bottom: 0 !important;
+        }
+    }
+
+    core-tab, .core-tab {
+        display: none;
+        height: 100%;
+        position: relative;
+
+        &.selected {
+            display: block;
+        }
+
+        ion-header {
+            display: none;
+        }
+
+        .fixed-content, .scroll-content {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+:not(.has-refresher) > .scroll-content.no-scroll {
+    overflow: hidden !important;
+}
+
+.ios .core-tabs-bar {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    > a {
+        font-size: 1.6rem;
+    }
+}
+
+.md .core-tabs-bar::after {
+    @extend .header-md::after;
+}
+
+.ios, .md, .wp {
+    .core-avoid-header ion-content core-tabs core-tab ion-content {
+        top: 0 !important;
+        height: 100% !important;
+    }
+    ion-content core-tabs core-tab .core-avoid-header ion-content {
+        top: 0 !important;
+        height: 100% !important;
+    }
+}

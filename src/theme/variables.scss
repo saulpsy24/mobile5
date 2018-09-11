@@ -1,0 +1,244 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+// Color palette
+$black:           #3a3a3a; // Headings, standard text.
+$gray-darker:     #626262; // Text (emphasis-detail), placeholder, background.
+$gray-dark:       #9e9e9e; // Borders (never text).
+$gray:            #dddddd;
+$gray-light:      #eeeeee; // Background.
+$gray-lighter:    #f5f5f5;
+$white:           #ffffff; // Background, reversed text.
+
+$blue:            #0064d2; // Link, background.
+$blue-light:      mix($blue, white, 20%); // Background.
+$blue-dark:       darken($blue, 10%);
+
+$turquoise:       #007982; // Accent.
+$turquoise-light: mix($turquoise, white, 20%); // Background.
+$turquoise-dark:  darken($turquoise, 10%);
+
+$green:           #5e8100; // Accent.
+$green-light:     mix($green, white, 20%);
+$green-dark:      darken($green, 10%);
+
+$red:             #cb3d4d;
+$red-light:       mix($red, white, 20%);
+$red-dark:        darken($red, 10%);
+
+$orange:          #f98012; // Accent (never text).
+$orange-light:    lighten($orange, 10%);
+
+$yellow:          #fbad1a; // Accent (never text).
+$yellow-light:    mix($yellow, white, 20%);
+$yellow-dark:     mix($yellow, black, 40%);
+
+$core-color:          $orange;
+$core-color-light:    lighten($core-color, 10%);
+$core-color-dark:     darken($core-color, 10%);
+
+$core-course-image-background: #81ecec, #74b9ff, #a29bfe, #dfe6e9, #00b894, #0984e3, #b2bec3, #fdcb6e, #fd79a8, #6c5ce7;
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$toolbar-background: $core-color;
+$content-padding: 10px;
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    $core-color,
+  secondary:  $turquoise,
+  danger:     $red,
+  light:      $gray-lighter,
+  gray:       $gray-dark,
+  dark:       $black,
+  warning:    $yellow,
+  success:    $green,
+  info:       $blue
+);
+
+$text-color:                 $black;
+$link-color:                 $blue;
+$background-color:           $gray-light;
+$subdued-text-color:         $gray-darker;
+
+$core-warning-color: colors($colors, warning) !default; // yellow.
+$core-success-color: colors($colors, success) !default; // green.
+$core-info-color: colors($colors, info) !default; // / blue.
+$core-error-color: colors($colors, alert) !default; // Red.
+
+$list-background-color:      $white;
+
+$tabs-background:            $gray-darker;
+$tabs-border-color:          #b2b2b2 !default;
+$tabs-tab-color-active:      $core-color;
+$tabs-tab-color-inactive:    $white;
+
+$text-input-highlight-color-valid: $green;
+$text-input-highlight-color-invalid: $red;
+
+$button-md-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) ;
+
+$refresher-icon-color: $core-color;
+
+
+// Moodle Mobile variables
+// --------------------------------------------------
+
+// Variables copied from Ionic 1.
+$item-icon-accessory-color:       #ccc !default;
+$item-icon-accessory-font-size:   16px !default;
+
+// Init screen.
+$core-color-init-screen:          #ff5c00;
+$core-color-init-screen-alt:      #ff7600;
+$core-init-screen-spinner-color:  $white;
+$core-init-screen-logo-width:     60%;
+$core-init-screen-logo-max-width: 300px;
+
+$core-fixed-url:                  false;
+
+
+// Branded apps customization
+// --------------------------------------------------
+@import "bmma";
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$text-input-ios-show-focus-highlight: false;
+$core-text-input-ios-show-highlight: false;
+$item-ios-avatar-size: 54px;
+$loading-ios-spinner-color: $core-color;
+$spinner-ios-ios-color: $core-color;
+$tabs-ios-tab-color-inactive: $tabs-tab-color-inactive;
+$button-ios-outline-background-color: $white;
+$toolbar-ios-height: 44px + 15;
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$text-input-md-show-focus-highlight: false;
+$core-text-input-md-show-highlight: true;
+$item-md-detail-push-show: true;
+$item-md-avatar-size: 54px;
+$loading-md-spinner-color: $core-color;
+$spinner-md-crescent-color: $core-color;
+$tabs-md-tab-color-inactive: $tabs-tab-color-inactive;
+$button-md-outline-background-color: $white;
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+$text-input-wp-show-focus-highlight: true;
+$item-wp-detail-push-show: true;
+$item-wp-avatar-size: 54px;
+$loading-wp-spinner-color: $core-color;
+$spinner-wp-circles-color: $core-color;
+$tabs-wp-tab-color-inactive: $tabs-tab-color-inactive;
+$button-wp-outline-background-color: $white;
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+// Moodle Mobile variables
+// --------------------------------------------------
+
+// Small avatar ideal for icons.
+$item-media-width: 32px !default;
+$item-media-height: 32px !default;
+
+$core-top-tabs-background: $white;
+$core-top-tabs-color: $gray-dark;
+$core-top-tabs-border: $gray;
+$core-top-tabs-color-active: $core-color;
+
+$core-user-profile-communication-icons-color: $core-color;
+
+$core-rte-min-height: 80px;
+
+$core-toolbar-button-image-width: 32px;
+
+// Timer variables.
+$core-timer-warn-color:     $red !default;
+$core-timer-iterations:     15 !default;
+
+// Question variables.
+$core-question-correct-color:         $green-dark !default;
+$core-question-correct-color-bg:      $green-light !default;
+$core-question-incorrect-color:       $red !default;
+$core-question-incorrect-color-bg:    $red-light !default;
+$core-question-feedback-color:        $yellow-dark !default;
+$core-question-feedback-color-bg:     $yellow-light !default;
+$core-question-warning-color:         $red !default;
+
+$core-question-state-correct-color:   $green-light !default;
+$core-question-state-partial-color:   $yellow-light !default;
+$core-question-state-incorrect-color: $red-light !default;
+
+// Mixins
+// -------------------------
+@mixin core-transition($where: all, $time: 500ms) {
+    -webkit-transition: $where $time ease-in-out;
+    -moz-transition: $where $time ease-in-out;
+    -ms-transition: $where $time ease-in-out;
+    -o-transition: $where $time ease-in-out;
+    transition: $where $time ease-in-out;
+}
+
+// Font Awesome
+$fa-font-path: $font-path;
+@import "font-awesome";
