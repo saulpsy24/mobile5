@@ -1,6 +1,0 @@
-core-context-menu-popover {
-    .item-md ion-icon[item-start] + .item-inner,
-    .item-md ion-icon[item-start] + .item-input {
-        @include margin-horizontal(5px, null);
-    }
-}
